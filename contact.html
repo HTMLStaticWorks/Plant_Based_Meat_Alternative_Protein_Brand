@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wholesale & Contact | Verdant Partners</title>
+  <meta name="description" content="Inquire about plant-based meat wholesale rates. Contact Verdant Foods to establish distributor, retail, or food-service supply chains.">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+  <style>
+    /* Premium Contact Page Custom Styles */
+    .contact-info-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      height: 100%;
+      box-shadow: 0 10px 30px var(--glass-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .contact-form-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 24px;
+      padding: 3rem;
+      box-shadow: 0 15px 40px var(--glass-shadow);
+    }
+    .office-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: var(--transition-smooth);
+      height: 100%;
+    }
+    .office-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--color-secondary);
+      box-shadow: 0 10px 25px var(--glass-shadow);
+    }
+    .office-card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    
+    /* Glowing Map SVG Nodes */
+    .map-node {
+      fill: var(--color-secondary);
+      stroke: var(--color-secondary);
+      stroke-width: 4;
+      animation: pulse-node 2s infinite;
+    }
+    @keyframes pulse-node {
+      0% {
+        r: 4;
+        stroke-opacity: 1;
+      }
+      100% {
+        r: 12;
+        stroke-opacity: 0;
+      }
+    }
+    .map-route {
+      stroke: var(--color-secondary);
+      stroke-opacity: 0.3;
+      stroke-dasharray: 6;
+      stroke-width: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY HEADER -->
+  <nav class="navbar navbar-expand-lg premium-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-weight: 800; font-size: 1.6rem; color: var(--color-primary); letter-spacing: -0.02em;">
+        <i class="bi bi-leaf-fill text-success me-2"></i><span style="color: var(--color-secondary);">VERDANT</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home2 </a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>
+          <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Distributors</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm btn-outline-secondary border-0" id="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="bi bi-moon-fill" style="font-size: 1.2rem; color: var(--color-text);"></i>
+          </button>
+          <button class="btn btn-sm btn-outline-secondary border-0" id="rtl-toggle" aria-label="Toggle RTL">
+            <i class="bi bi-arrow-left-right" style="font-size: 1.2rem; color: var(--color-text);"></i>
+          </button>
+          <a class="btn-premium btn" href="contact.html">Distributor</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- EDITORIAL HERO -->
+  <header class="py-5 position-relative overflow-hidden d-flex align-items-center" style="background-color: var(--color-accent); padding-top: 150px; min-height: 380px;">
+    <div class="organic-blob" style="top: -10%; right: -10%;"></div>
+    <div class="container position-relative z-3 py-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 reveal-on-scroll">
+          <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill mb-3" style="font-weight: 600;">DISTRIBUTORS & SALES</span>
+          <h1 class="display-4 fw-bold">Partner with Verdant</h1>
+          <p class="lead text-muted mb-0">Establish commercial supply accounts, custom wholesale logistics, or retail shelf space parameters. Connect directly with our enterprise division.</p>
+        </div>
+        <div class="col-lg-5 text-center reveal-scale d-none d-lg-block">
+          <img src="assets/images/contact_hero.png" alt="Verdant package shipment logistics" class="img-fluid rounded-4 shadow-lg border border-1 border-white" style="max-height: 280px; width: 100%; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- INQUIRY & LOGISTICS SECTION -->
+  <section class="py-5" style="background-color: var(--color-bg);">
+    <div class="container py-5">
+      <div class="row g-5">
+        <!-- Left Column: Logistics Info & Map -->
+        <div class="col-lg-5 reveal-on-scroll">
+          <div class="contact-info-card">
+            <div>
+              <div class="mb-4 overflow-hidden rounded-4 border shadow-sm" style="height: 150px;">
+                <img src="assets/images/contact_partner.png" alt="Verdant partnership network" class="w-100 h-100" style="object-fit: cover; filter: brightness(0.95);">
+              </div>
+              <h3 class="fw-bold mb-3">Global Supply Chain</h3>
+              <p class="text-muted small mb-4">Verdant distributes alternative plant proteins to regional grocery networks, fast-food franchises, and wholesale warehouses worldwide.</p>
+              
+              <!-- SVG Global Map -->
+              <div class="p-3 border rounded-4 bg-light shadow-sm mb-4">
+                <svg viewBox="0 0 800 400" width="100%" height="100%" style="background-color: transparent;">
+                  <path d="M 50,0 L 50,400 M 150,0 L 150,400 M 250,0 L 250,400 M 350,0 L 350,400 M 450,0 L 450,400 M 550,0 L 550,400 M 650,0 L 650,400 M 750,0 L 750,400" stroke="rgba(0,0,0,0.03)" stroke-width="1" />
+                  <path d="M 0,50 L 800,50 M 0,150 L 800,150 M 0,250 L 800,250 M 0,350 L 800,350" stroke="rgba(0,0,0,0.03)" stroke-width="1" />
+                  <path class="map-route" d="M 120,180 Q 260,110 420,130" />
+                  <path class="map-route" d="M 420,130 Q 560,120 700,220" />
+                  <path class="map-route" d="M 120,180 Q 410,230 700,220" />
+                  <circle cx="120" cy="180" r="6" fill="var(--color-secondary)" />
+                  <circle class="map-node" cx="120" cy="180" r="6" />
+                  <text x="100" y="205" font-family="Outfit" font-size="12" font-weight="600" fill="var(--color-text)">San Francisco (HQ)</text>
+                  <circle cx="420" cy="130" r="6" fill="var(--color-secondary)" />
+                  <circle class="map-node" cx="420" cy="130" r="6" />
+                  <text x="400" y="115" font-family="Outfit" font-size="12" font-weight="600" fill="var(--color-text)">London Hub</text>
+                  <circle cx="700" cy="220" r="6" fill="var(--color-secondary)" />
+                  <circle class="map-node" cx="700" cy="220" r="6" />
+                  <text x="680" y="245" font-family="Outfit" font-size="12" font-weight="600" fill="var(--color-text)">Tokyo Terminal</text>
+                </svg>
+              </div>
+            </div>
+            
+            <div class="border-top pt-4 mt-2">
+              <h5 class="fw-bold mb-2">Enterprise Contact</h5>
+              <p class="small text-muted mb-1"><i class="bi bi-telephone-fill me-2 text-success"></i> +1 (800) 555-VEGN</p>
+              <p class="small text-muted mb-3"><i class="bi bi-envelope-fill me-2 text-success"></i> wholesale@verdantfoods.com</p>
+              
+              <!-- Enterprise Social Links -->
+              <div class="d-flex gap-3 align-items-center">
+                <span class="small text-muted me-1">Follow Us:</span>
+                <a href="#" aria-label="LinkedIn" class="text-success fs-5 social-hover"><i class="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="Instagram" class="text-success fs-5 social-hover"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="Twitter" class="text-success fs-5 social-hover"><i class="bi bi-twitter-x"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Commercial Form -->
+        <div class="col-lg-7 reveal-scale">
+          <div class="contact-form-card">
+            <div class="mb-4">
+              <h3 class="fw-bold mb-2">Commercial Partnership Application</h3>
+              <p class="text-muted small">Submit your company distribution parameters. Our partnerships desk will respond within one business day.</p>
+            </div>
+            
+            <form class="premium-form">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label small text-muted">Business Name</label>
+                  <input type="text" class="form-control premium-form-control" placeholder="Company Name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small text-muted">Contact Person</label>
+                  <input type="text" class="form-control premium-form-control" placeholder="Full Name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small text-muted">Business Email</label>
+                  <input type="email" class="form-control premium-form-control" placeholder="email@business.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small text-muted">Phone Number</label>
+                  <input type="tel" class="form-control premium-form-control" placeholder="Phone Number" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small text-muted">Business Type</label>
+                  <select class="form-select premium-form-control text-muted" required>
+                    <option value="">Select Category...</option>
+                    <option value="retail">Supermarket / Retailer</option>
+                    <option value="distributor">Wholesale Distributor</option>
+                    <option value="service">Food-Service Provider</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small text-muted">Monthly Volume</label>
+                  <select class="form-select premium-form-control text-muted" required>
+                    <option value="">Select Volume...</option>
+                    <option value="small">Less than 1 Ton</option>
+                    <option value="medium">1 - 5 Tons</option>
+                    <option value="large">5 - 10 Tons</option>
+                    <option value="enterprise">10+ Tons</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label small text-muted">Inquiry Details</label>
+                  <textarea class="form-control premium-form-control" rows="4" placeholder="Briefly details your regional cold-storage shipping networks or trial requirements..." required></textarea>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-premium w-100 py-3">Submit Application</button>
+                </div>
+              </div>
+            </form>
+            
+            <div class="form-success-card text-center p-4">
+              <div class="text-success fs-1 mb-2"><i class="bi bi-envelope-check-fill"></i></div>
+              <h4 class="fw-bold">Application Received!</h4>
+              <p class="small text-muted">A logistics and accounts director will contact you within 24 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ & LOCATIONS SECTION (NEW) -->
+  <section class="py-5" style="background-color: var(--color-accent);">
+    <div class="container py-5">
+      <div class="row justify-content-center text-center mb-5 reveal-on-scroll">
+        <div class="col-lg-8">
+          <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill mb-3" style="font-weight: 600;">LOCATIONS & SUPPORT</span>
+          <h2 class="fw-bold">Global Presence & FAQs</h2>
+          <p class="lead text-muted">Discover our office terminals and key parameters for commercial logistics.</p>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <!-- FAQ Accordion -->
+        <div class="col-lg-6 reveal-on-scroll">
+          <h3 class="fw-bold mb-4">Frequently Asked Questions</h3>
+          
+          <div class="accordion-system">
+            <div class="border-bottom mb-3 pb-3">
+              <button class="accordion-header-btn w-100 d-flex justify-content-between align-items-center bg-transparent border-0 text-start py-2" style="color: var(--color-text); font-weight: 600;">
+                <span>What are the minimum order quantities (MOQ)?</span>
+                <i class="bi bi-chevron-down text-success"></i>
+              </button>
+              <div class="accordion-body-content mt-2" style="display: none;">
+                <p class="small text-muted mb-0">Our wholesale MOQ starts at 500 kilograms for regional distributors. However, we can establish smaller trial accounts for selected restaurant chains.</p>
+              </div>
+            </div>
+            
+            <div class="border-bottom mb-3 pb-3">
+              <button class="accordion-header-btn w-100 d-flex justify-content-between align-items-center bg-transparent border-0 text-start py-2" style="color: var(--color-text); font-weight: 600;">
+                <span>Are the products shipped frozen or chilled?</span>
+                <i class="bi bi-chevron-down text-success"></i>
+              </button>
+              <div class="accordion-body-content mt-2" style="display: none;">
+                <p class="small text-muted mb-0">We ship products flash-frozen at -18°C (-0.4°F) using refrigerated containers, preserving texturized fibers perfectly.</p>
+              </div>
+            </div>
+
+            <div class="border-bottom mb-3 pb-3">
+              <button class="accordion-header-btn w-100 d-flex justify-content-between align-items-center bg-transparent border-0 text-start py-2" style="color: var(--color-text); font-weight: 600;">
+                <span>Are custom formulations available for wholesale partners?</span>
+                <i class="bi bi-chevron-down text-success"></i>
+              </button>
+              <div class="accordion-body-content mt-2" style="display: none;">
+                <p class="small text-muted mb-0">Yes, our FoodTech extrusion labs can adjust texture density, marbling ratios, and sodium levels for private labels ordering above 10 tons monthly.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Global Logistics Routing Map (Moved Here to Fill Empty Space) -->
+          <div class="office-card shadow-sm mt-5">
+            <img src="assets/images/contact_map.png" alt="Verdant global routing network map" class="office-card-img" style="height: 200px;">
+            <div class="p-4">
+              <h5 class="fw-bold mb-1">Logistics & Terminal Network Map</h5>
+              <p class="small text-muted mb-0">Our primary sea-freight and air-cargo distribution pathways connecting US, EU, and Asian terminals, maintaining zero-carbon delivery flow.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporate Office Locations -->
+        <div class="col-lg-6 reveal-on-scroll" style="transition-delay: 0.1s;">
+          <h3 class="fw-bold mb-4">Corporate Offices</h3>
+          
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="office-card shadow-sm">
+                <img src="assets/images/contact_office.png" alt="San Francisco headquarters office" class="office-card-img">
+                <div class="p-4">
+                  <h5 class="fw-bold mb-1">San Francisco, US</h5>
+                  <p class="small text-muted mb-2">North American HQ</p>
+                  <span class="small d-block text-muted-emphasis"><i class="bi bi-geo-alt-fill text-success me-1"></i> 100 Pine St, SF, CA</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="office-card shadow-sm">
+                <img src="assets/images/contact_faq.png" alt="London distribution terminal office" class="office-card-img">
+                <div class="p-4">
+                  <h5 class="fw-bold mb-1">London, UK</h5>
+                  <p class="small text-muted mb-2">European Distribution Hub</p>
+                  <span class="small d-block text-muted-emphasis"><i class="bi bi-geo-alt-fill text-success me-1"></i> 20 Eastbourne Terrace, W2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOOGLE MAPS HQ EMBED (NEW) -->
+  <section class="py-5" style="background-color: var(--color-bg);">
+    <div class="container py-3">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 reveal-on-scroll">
+          <h3 class="fw-bold mb-3">Find Our Headquarters</h3>
+          <p class="small text-muted mb-4">Visit our main FoodTech laboratories and corporate offices at 100 Pine St, San Francisco, CA.</p>
+          <div class="overflow-hidden rounded-4 border shadow-lg" style="height: 380px;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.9737418706346!2d-122.40194882357732!3d37.79234851111626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580626a575a7b%3A0x6a2c26f74a0bb28!2s100%20Pine%20St%2C%20San%20Francisco%2C%20CA%2094111%2C%20USA!5e0!3m2!1sen!2s!4v1718978000000!5m2!1sen!2s" 
+              width="100%" 
+              height="100%" 
+              style="border:0; filter: grayscale(0.2) contrast(1.05);" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <a class="d-flex align-items-center mb-3 text-white" href="index.html" style="font-weight: 800; font-size: 1.4rem; text-decoration: none; letter-spacing: -0.02em;">
+            <i class="bi bi-leaf-fill text-success me-2"></i><span style="color: var(--color-secondary);">VERDANT</span>
+          </a>
+          <p class="text-white-50 small mb-4">World-class alternative protein brands utilizing breakthrough FoodTech solutions to secure a highly nutritious, zero-carbon future for human nutrition.</p>
+          <div class="d-flex gap-3">
+            <a href="#" aria-label="LinkedIn" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Distributors</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="fw-bold text-white mb-3">Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="contact.html#faq">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Contact Sales</h5>
+          <p class="small text-white-50">Inquire about distribution rates, supply contracts, or retail shelf space parameters.</p>
+          <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> wholesale@verdantfoods.com</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> +1 (800) 555-VEGN</p>
+        </div>
+      </div>
+      <hr class="my-4 border-white-50">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <span class="small text-white-50">&copy; 2026 Verdant Foods Inc. All rights reserved.</span>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="small text-white-50 me-3">Privacy Policy</a>
+          <a href="#" class="small text-white-50">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <div class="back-to-top" id="back-to-top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up-short" style="font-size: 1.8rem;"></i>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

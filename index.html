@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verdant | Premium Plant-Based Protein & FoodTech</title>
+  <meta name="description"
+    content="Discover the next generation of alternative proteins. Verdant Foods combines advanced FoodTech with organic farming to create ultra-premium, sustainable plant-based meats.">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+</head>
+
+<body>
+
+  <!-- STICKY HEADER -->
+  <nav class="navbar navbar-expand-lg premium-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html"
+        style="font-weight: 800; font-size: 1.6rem; color: var(--color-primary); letter-spacing: -0.02em;">
+        <i class="bi bi-leaf-fill text-success me-2"></i><span style="color: var(--color-secondary);">VERDANT</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home2 </a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>
+          <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Distributors</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm btn-outline-secondary border-0" id="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="bi bi-moon-fill" style="font-size: 1.2rem; color: var(--color-text);"></i>
+          </button>
+          <button class="btn btn-sm btn-outline-secondary border-0" id="rtl-toggle" aria-label="Toggle RTL">
+            <i class="bi bi-arrow-left-right" style="font-size: 1.2rem; color: var(--color-text);"></i>
+          </button>
+          <a class="btn-premium btn" href="contact.html">Distributor</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="position-relative overflow-hidden min-vh-100 d-flex align-items-center"
+    style="background-color: var(--color-accent); padding-top: 100px;">
+    <!-- Parallax Blobs -->
+    <div class="organic-blob" style="top: 10%; left: -5%;"></div>
+    <div class="organic-blob" style="bottom: 5%; right: -5%; width: 600px; height: 600px; animation-duration: 25s;">
+    </div>
+
+    <!-- Floating 3D Elements -->
+    <div class="floating-element"
+      style="top: 20%; right: 40%; font-size: 2.5rem; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.15));">🌱</div>
+    <div class="floating-element-slow"
+      style="bottom: 15%; left: 10%; font-size: 3rem; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.15));">🥬</div>
+    <div class="floating-element"
+      style="top: 45%; right: 10%; font-size: 2rem; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.15));">🌾</div>
+
+    <div class="container py-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal-on-scroll">
+          <div class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill mb-4"
+            style="font-weight: 600; letter-spacing: 0.05em; font-size: 0.85rem;">THE FUTURE OF FOODTECH</div>
+          <h1 class="display-3 fw-bold">Nutrition Elevated. Nature Preserved.</h1>
+          <p class="lead mb-5" style="color: var(--color-text-muted);">
+            Verdant Foods redefines gastronomy with world-class plant-based protein cutlets, burgers, and minces.
+            Exquisite taste meets uncompromising environmental responsibility.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="products.html" class="btn btn-premium px-4 py-3">Explore Catalog</a>
+            <a href="contact.html" class="btn btn-outline-premium px-4 py-3">Wholesale Inquiry</a>
+          </div>
+
+          <!-- Glass Floating Card -->
+          <div class="glass-card mt-5 d-flex align-items-center gap-4 py-3 px-4 shadow-sm border-1 border-white"
+            style="max-width: 450px;">
+            <div class="fs-1 text-success"><i class="bi bi-shield-check"></i></div>
+            <div>
+              <h4 class="mb-1 fw-bold fs-5 text-primary-emphasis">100% Non-GMO Certified</h4>
+              <p class="mb-0 small text-muted">Clean ingredient decks, gluten-free options, and zero synthetic
+                preservatives.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center position-relative reveal-scale">
+          <!-- Hero Product Image -->
+          <div class="position-relative d-inline-block">
+            <div class="rounded-circle bg-success bg-opacity-10 position-absolute start-50 top-50 translate-middle"
+              style="width: 110%; height: 110%; z-index: -1;"></div>
+            <img src="assets/images/home_hero_bg.png" alt="Premium Grilled Alternative Burger"
+              class="img-fluid rounded-circle shadow-lg border border-5 border-white"
+              style="width: 480px; height: 480px; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- WHY PLANT-BASED PROTEIN -->
+  <section class="py-5 position-relative overflow-hidden" id="benefits" style="background-color: var(--color-bg);">
+    <div class="container py-5">
+      <div class="row justify-content-center text-center mb-5 reveal-on-scroll">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Redefining Protein for a Better Planet</h2>
+          <p class="lead">Why switch to alternative proteins? The numbers reveal the profound impact of plant-based
+            culinary choices on nutrition and the environment.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Benefit Card 1 -->
+        <div class="col-md-4 col-sm-6 text-center reveal-on-scroll" style="transition-delay: 0.1s;">
+          <div class="glass-card h-100 p-4 border border-1">
+            <div class="mb-3 d-inline-block rounded-circle p-3 bg-success bg-opacity-10 text-success fs-3">
+              <i class="bi bi-heart-pulse-fill"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-3">Superior Health Profile</h3>
+            <p class="small text-muted mb-4">Rich in prebiotic fibers, high protein density, and completely free from
+              cholesterol and trans-fats.</p>
+            <div class="counter-num" data-target="21" data-suffix="g">0</div>
+            <span class="text-uppercase small fw-bold text-muted">Protein per serving</span>
+          </div>
+        </div>
+
+        <!-- Benefit Card 2 -->
+        <div class="col-md-4 col-sm-6 text-center reveal-on-scroll" style="transition-delay: 0.2s;">
+          <div class="glass-card h-100 p-4 border border-1">
+            <div class="mb-3 d-inline-block rounded-circle p-3 bg-success bg-opacity-10 text-success fs-3">
+              <i class="bi bi-tree-fill"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-3">90% Less CO2 Emissions</h3>
+            <p class="small text-muted mb-4">Significantly lower greenhouse gas footprint compared to standard animal
+              husbandry operations.</p>
+            <div class="counter-num" data-target="89" data-suffix="%">0</div>
+            <span class="text-uppercase small fw-bold text-muted">Carbon Reduction</span>
+          </div>
+        </div>
+
+        <!-- Benefit Card 3 -->
+        <div class="col-md-4 col-sm-6 text-center reveal-on-scroll" style="transition-delay: 0.3s;">
+          <div class="glass-card h-100 p-4 border border-1">
+            <div class="mb-3 d-inline-block rounded-circle p-3 bg-success bg-opacity-10 text-success fs-3">
+              <i class="bi bi-droplet-fill"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-3">Water Conservation</h3>
+            <p class="small text-muted mb-4">Saves thousands of liters of freshwater per kilogram of meat alternative
+              produced.</p>
+            <div class="counter-num" data-target="99.2" data-float="true" data-suffix="%">0</div>
+            <span class="text-uppercase small fw-bold text-muted">Water saved</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="py-5 position-relative" id="products" style="background-color: var(--color-accent);">
+    <div class="container py-5">
+      <div class="row justify-content-between align-items-end mb-5 reveal-on-scroll">
+        <div class="col-md-7">
+          <h2 class="fw-bold mb-0">Chef-Crafted Plant-Based Classics</h2>
+          <p class="lead mb-0 mt-3">Savor authentic textures and high culinary standards. No sacrifices required.</p>
+        </div>
+        <div class="col-md-3 text-md-end mt-4 mt-md-0">
+          <a href="products.html" class="btn btn-outline-premium">View All Products</a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-lg-4 col-md-6 reveal-on-scroll" style="transition-delay: 0.1s;">
+          <div class="premium-product-card h-100">
+            <div class="product-image-container">
+              <img src="assets/images/home_prod_burger.png" alt="Verdant Burger Patty">
+            </div>
+            <div class="p-4">
+              <span class="text-uppercase small text-success fw-bold">FoodTech Signature</span>
+              <h3 class="h4 fw-bold mt-2">The Verdant Burger Patty</h3>
+              <p class="small text-muted">A thick, juicy, sizzle-ready burger packed with 21g of clean pea protein.</p>
+              <hr class="my-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small fw-bold">Pack of 4 Paties</span>
+                <a href="products.html" class="btn btn-sm btn-premium">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-lg-4 col-md-6 reveal-on-scroll" style="transition-delay: 0.2s;">
+          <div class="premium-product-card h-100">
+            <div class="product-image-container">
+              <img src="assets/images/home_prod_sausage.png" alt="Verdant Italian Sausage">
+            </div>
+            <div class="p-4">
+              <span class="text-uppercase small text-success fw-bold">Artisan Spice</span>
+              <h3 class="h4 fw-bold mt-2">Smoked Italian Sausages</h3>
+              <p class="small text-muted">Fennel-infused, hearty vegan sausages with an authentic snap and smoky bite.
+              </p>
+              <hr class="my-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small fw-bold">Pack of 6 Links</span>
+                <a href="products.html" class="btn btn-sm btn-premium">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-lg-4 col-md-6 reveal-on-scroll" style="transition-delay: 0.3s;">
+          <div class="premium-product-card h-100">
+            <div class="product-image-container">
+              <img src="assets/images/home_prod_mince.png" alt="Verdant Ground Mince">
+            </div>
+            <div class="p-4">
+              <span class="text-uppercase small text-success fw-bold">Versatile Kitchen</span>
+              <h3 class="h4 fw-bold mt-2">Savory Ground Mince</h3>
+              <p class="small text-muted">Perfect for Bolognese, tacos, and meatballs. Absorbs spices and browns
+                beautifully.</p>
+              <hr class="my-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small fw-bold">500g Fresh Pack</span>
+                <a href="products.html" class="btn btn-sm btn-premium">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUSTAINABILITY IMPACT -->
+  <section class="py-5 overflow-hidden" id="sustainability" style="background-color: var(--color-bg);">
+    <div class="container py-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal-on-scroll">
+          <h2 class="fw-bold">Measure Your Impact</h2>
+          <p class="lead">Every meal counts. By shifting to Verdant Foods' plant protein, you actively slow climate
+            degradation. Here is how your trade-off translates into environmental preservation.</p>
+
+          <div class="mt-4">
+            <div class="d-flex justify-content-between mb-2">
+              <span class="fw-bold">CO2 Emission Cut</span>
+              <span class="text-success fw-bold">90% Less</span>
+            </div>
+            <div class="sustainability-meter mb-4">
+              <div class="sustainability-progress" style="width: 90%;"></div>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2">
+              <span class="fw-bold">Water Conservation</span>
+              <span class="text-success fw-bold">95% Saved</span>
+            </div>
+            <div class="sustainability-meter mb-4">
+              <div class="sustainability-progress" style="width: 95%;"></div>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2">
+              <span class="fw-bold">Agricultural Land Reduction</span>
+              <span class="text-success fw-bold">93% Saved</span>
+            </div>
+            <div class="sustainability-meter">
+              <div class="sustainability-progress" style="width: 93%;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center reveal-scale">
+          <img src="assets/images/home_sustain_chart.png" alt="Ecological glass design representing sustainability"
+            class="img-fluid rounded-4 shadow-lg border border-1 border-white"
+            style="max-height: 400px; width: 100%; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEALTH & NUTRITION COMPARISON -->
+  <section class="py-5" style="background-color: var(--color-accent);">
+    <div class="container py-5">
+      <div class="row justify-content-center text-center mb-5 reveal-on-scroll">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Nutrition Facts: The Modern Comparison</h2>
+          <p class="lead">Compare the nutritional density of a standard animal-based burger patty with a Verdant burger
+            patty. You will be amazed.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-8 reveal-scale">
+          <div class="nutrition-grid-wrapper shadow-lg">
+            <div class="nutrition-grid border-0 bg-white">
+              <div class="nutrition-row fw-bold text-white bg-success"
+                style="background-color: var(--color-primary) !important;">
+                <span>Nutrient per 100g</span>
+                <span>Animal-Based Beef (80/20)</span>
+                <span>Verdant Plant-Based</span>
+              </div>
+              <div class="nutrition-row">
+                <span class="fw-bold">Protein (g)</span>
+                <span>17.4 g</span>
+                <span class="text-success fw-bold">20.5 g</span>
+              </div>
+              <div class="nutrition-row">
+                <span class="fw-bold">Dietary Fiber (g)</span>
+                <span>0 g</span>
+                <span class="text-success fw-bold">6.0 g</span>
+              </div>
+              <div class="nutrition-row">
+                <span class="fw-bold">Saturated Fat (g)</span>
+                <span>7.6 g</span>
+                <span class="text-success fw-bold">2.5 g</span>
+              </div>
+              <div class="nutrition-row">
+                <span class="fw-bold">Cholesterol (mg)</span>
+                <span>71 mg</span>
+                <span class="text-success fw-bold">0 mg</span>
+              </div>
+              <div class="nutrition-row">
+                <span class="fw-bold">Iron (% DV)</span>
+                <span>12%</span>
+                <span class="text-success fw-bold">25%</span>
+              </div>
+              <div class="nutrition-row">
+                <span class="fw-bold">Sodium (mg)</span>
+                <span>66 mg</span>
+                <span>380 mg</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-center mt-3 small text-muted">*Data based on standard USDA nutritional analysis comparisons.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS & PARTNER LOGOS -->
+  <section class="py-5" style="background-color: var(--color-bg);">
+    <div class="container py-5">
+      <div class="row justify-content-center text-center mb-5 reveal-on-scroll">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Loved by Chefs, Trusted by Retailers</h2>
+          <p class="lead">From Michelin-starred restaurants to high-traffic supermarkets, Verdant Foods is transforming
+            menus and grocery shelves globally.</p>
+        </div>
+      </div>
+
+      <div class="testimonial-wrapper reveal-scale">
+        <div class="testimonial-container">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide">
+            <div class="glass-card text-center p-5 border">
+              <p class="fs-4 italic text-primary mb-4" style="font-style: italic;">"Verdant Foods' burger patties hold
+                their shape, brown like beef, and possess a savory profile that surprised even our most critical
+                steak-loving customers. An incredible product."</p>
+              <h4 class="fw-bold mb-1">Chef Jean-Luc Gauthier</h4>
+              <span class="small text-muted text-uppercase">Executive Chef, Le Vert Paris</span>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <div class="glass-card text-center p-5 border">
+              <p class="fs-4 italic text-primary mb-4" style="font-style: italic;">"Wholesale inquiries surged 40% after
+                stocking Verdant Foods. Their delivery times are impeccable, and the shelf stability of the
+                vacuum-sealed mince is excellent."</p>
+              <h4 class="fw-bold mb-1">Sarah Jenkins</h4>
+              <span class="small text-muted text-uppercase">Director of Operations, Organic Foods Co-op</span>
+            </div>
+          </div>
+        </div>
+        <div class="slider-dots"></div>
+      </div>
+
+      <!-- Retail Partner Logos -->
+      <div class="mt-5 pt-4 overflow-hidden border-top">
+        <div class="logo-track">
+          <div class="logo-slide"><span class="fs-3 fw-bold text-muted opacity-50">🌱 ECO-VEG</span></div>
+          <div class="logo-slide"><span class="fs-3 fw-bold text-muted opacity-50">🍽️ FOODCOURT</span></div>
+          <div class="logo-slide"><span class="fs-3 fw-bold text-muted opacity-50">🏪 GREENS</span></div>
+          <div class="logo-slide"><span class="fs-3 fw-bold text-muted opacity-50">🚛 SUPPLY-X</span></div>
+          <div class="logo-slide"><span class="fs-3 fw-bold text-muted opacity-50">🌾 PEA-CORP</span></div>
+          <!-- Repeats for infinite scrolling -->
+          <div class="logo-slide"><span class="fs-3 fw-bold text-muted opacity-50">🌱 ECO-VEG</span></div>
+          <div class="logo-slide"><span class="fs-3 fw-bold text-muted opacity-50">🍽️ FOODCOURT</span></div>
+          <div class="logo-slide"><span class="fs-3 fw-bold text-muted opacity-50">🏪 GREENS</span></div>
+          <div class="logo-slide"><span class="fs-3 fw-bold text-muted opacity-50">🚛 SUPPLY-X</span></div>
+          <div class="logo-slide"><span class="fs-3 fw-bold text-muted opacity-50">🌾 PEA-CORP</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER CTA -->
+  <section class="py-5 position-relative overflow-hidden" style="background-color: var(--color-accent);">
+    <div class="organic-blob" style="top: -20%; right: -20%; width: 400px; height: 400px;"></div>
+    <div class="container py-5">
+      <div class="row justify-content-center text-center reveal-on-scroll">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-3">Join the Protein Revolution</h2>
+          <p class="lead mb-4">Stay informed about retail drops, exclusive distributor terms, and product development
+            breakthroughs.</p>
+
+          <div class="glass-card p-4 mx-auto" style="max-width: 600px; border: 1px solid rgba(255,255,255,0.8);">
+            <!-- Subscription Form -->
+            <form class="premium-form d-flex flex-column flex-sm-row gap-3">
+              <input type="email" class="form-control premium-form-control flex-grow-1"
+                placeholder="Enter your business email" required>
+              <button type="submit" class="btn btn-premium px-4">Subscribe</button>
+            </form>
+            <!-- Success Message -->
+            <div class="form-success-card">
+              <div class="text-success fs-1 mb-2"><i class="bi bi-check-circle-fill"></i></div>
+              <h4 class="fw-bold">Subscription Confirmed!</h4>
+              <p class="mb-0 text-muted">You have successfully subscribed to the Verdant Foods mailing list.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <a class="d-flex align-items-center mb-3 text-white" href="index.html"
+            style="font-weight: 800; font-size: 1.4rem; text-decoration: none; letter-spacing: -0.02em;">
+            <i class="bi bi-leaf-fill text-success me-2"></i><span style="color: var(--color-secondary);">VERDANT</span>
+          </a>
+          <p class="text-white-50 small mb-4">World-class alternative protein brands utilizing breakthrough FoodTech
+            solutions to secure a highly nutritious, zero-carbon future for human nutrition.</p>
+          <div class="d-flex gap-3">
+            <a href="#" aria-label="LinkedIn" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Distributors</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="fw-bold text-white mb-3">Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="contact.html#faq">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Contact Sales</h5>
+          <p class="small text-white-50">Inquire about distribution rates, supply contracts, or retail shelf space
+            parameters.</p>
+          <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> wholesale@verdantfoods.com</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> +1 (800) 555-VEGN</p>
+        </div>
+      </div>
+      <hr class="my-4 border-white-50">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <span class="small text-white-50">&copy; 2026 Verdant Foods Inc. All rights reserved.</span>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="small text-white-50 me-3">Privacy Policy</a>
+          <a href="#" class="small text-white-50">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <div class="back-to-top" id="back-to-top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up-short" style="font-size: 1.8rem;"></i>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

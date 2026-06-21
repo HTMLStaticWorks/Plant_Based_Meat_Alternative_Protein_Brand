@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verdant Foods | The FoodTech Revolution</title>
+  <meta name="description" content="Explore alternative meat categories by Verdant Foods. Premium plant protein that delivers pure taste, perfect texture, and zero environmental compromise.">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+  <style>
+    .fullscreen-hero {
+      min-vh: 100vh;
+      background: linear-gradient(rgba(17, 45, 29, 0.7), rgba(17, 45, 29, 0.9)), url('assets/images/home2_hero.png') no-repeat center center/cover;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+    }
+    .category-overlay-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      cursor: pointer;
+    }
+    .category-overlay-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-smooth);
+    }
+    .category-overlay-card:hover img {
+      transform: scale(1.1);
+    }
+    .category-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 2rem;
+      background: linear-gradient(to top, rgba(11, 15, 12, 0.9) 0%, rgba(11, 15, 12, 0) 100%);
+      color: #ffffff;
+      transition: var(--transition-smooth);
+    }
+    .journey-step {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px var(--glass-shadow);
+    }
+    .journey-step img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY HEADER -->
+  <nav class="navbar navbar-expand-lg premium-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-weight: 800; font-size: 1.6rem; color: var(--color-primary); letter-spacing: -0.02em;">
+        <i class="bi bi-leaf-fill text-success me-2"></i><span style="color: var(--color-secondary);">VERDANT</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="home2.html">Home2 </a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>
+          <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Distributors</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm btn-outline-secondary border-0" id="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="bi bi-moon-fill" style="font-size: 1.2rem; color: var(--color-text);"></i>
+          </button>
+          <button class="btn btn-sm btn-outline-secondary border-0" id="rtl-toggle" aria-label="Toggle RTL">
+            <i class="bi bi-arrow-left-right" style="font-size: 1.2rem; color: var(--color-text);"></i>
+          </button>
+          <a class="btn-premium btn" href="contact.html">Distributor</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- FULLSCREEN HERO -->
+  <header class="fullscreen-hero min-vh-100 position-relative">
+    <!-- Floating particles -->
+    <div class="floating-element" style="top: 15%; right: 20%; font-size: 3rem;">🍂</div>
+    <div class="floating-element-slow" style="bottom: 20%; left: 15%; font-size: 2.5rem;">🥗</div>
+    
+    <div class="container py-5">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-8 reveal-on-scroll">
+          <div class="badge bg-success text-white px-3 py-2 rounded-pill mb-4" style="font-weight: 600; letter-spacing: 0.05em; font-size: 0.85rem;">2026 TASTE BENCHMARK</div>
+          <h1 class="display-2 fw-bold text-white mb-4">Cultivated to Indulge.<br>Committed to Heal.</h1>
+          <p class="lead text-white-50 mb-5 fs-4" style="max-width: 650px;">
+            Experience the culinary paradigm shift. Exceptional mouthfeel, complete amino acid chains, and pure ingredients grown straight from the earth.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#categories" class="btn btn-premium px-5 py-3">Explore Categories</a>
+            <a href="about.html" class="btn btn-outline-light px-5 py-3 rounded-pill" style="font-weight: 600;">Learn Our Tech</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PRODUCT CATEGORIES -->
+  <section class="py-5" id="categories" style="background-color: var(--color-bg);">
+    <div class="container py-5">
+      <div class="row justify-content-center text-center mb-5 reveal-on-scroll">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Designed For Gastronomy</h2>
+          <p class="lead text-muted">A premium category for every culinary application. Discover texture-perfect protein substitutes designed for high-performance kitchens.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Cat 1 -->
+        <div class="col-md-6 col-lg-3 reveal-on-scroll">
+          <div class="category-overlay-card">
+            <img src="assets/images/home2_cat_burger.png" alt="Burgers Category">
+            <div class="category-card-content">
+              <h3 class="h4 fw-bold mb-1">Burgers</h3>
+              <p class="small text-white-50 mb-0">Thick, juicy patties built for the grill.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Cat 2 -->
+        <div class="col-md-6 col-lg-3 reveal-on-scroll" style="transition-delay: 0.1s;">
+          <div class="category-overlay-card">
+            <img src="assets/images/home2_cat_sausage.png" alt="Sausages Category">
+            <div class="category-card-content">
+              <h3 class="h4 fw-bold mb-1">Sausages</h3>
+              <p class="small text-white-50 mb-0">Spiced, smoky links with authentic snap.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Cat 3 -->
+        <div class="col-md-6 col-lg-3 reveal-on-scroll" style="transition-delay: 0.2s;">
+          <div class="category-overlay-card">
+            <img src="assets/images/home2_cat_mince.png" alt="Mince Category">
+            <div class="category-card-content">
+              <h3 class="h4 fw-bold mb-1">Mince</h3>
+              <p class="small text-white-50 mb-0">Ground protein suited for culinary versatility.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Cat 4 -->
+        <div class="col-md-6 col-lg-3 reveal-on-scroll" style="transition-delay: 0.3s;">
+          <div class="category-overlay-card">
+            <img src="assets/images/home2_cat_meals.png" alt="Ready Meals Category">
+            <div class="category-card-content">
+              <h3 class="h4 fw-bold mb-1">Ready Meals</h3>
+              <p class="small text-white-50 mb-0">Convenient, high-protein gourmet meal prep.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FARM-TO-TABLE JOURNEY -->
+  <section class="py-5" style="background-color: var(--color-accent);">
+    <div class="container py-5">
+      <div class="row justify-content-center text-center mb-5 reveal-on-scroll">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">The Seed-to-Sizzle Cycle</h2>
+          <p class="lead">We maintain vertical oversight from sustainable crop rotation down to the sterile manufacturing hubs. Transparency at every step.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-md-4 reveal-on-scroll">
+          <div class="journey-step bg-white p-3">
+            <img src="assets/images/home2_journey_farm.png" alt="Pea fields" class="rounded-3 mb-3">
+            <span class="badge bg-success-subtle text-success px-3 py-1 mb-2">Stage 01</span>
+            <h3 class="h5 fw-bold text-primary">Regenerative Farming</h3>
+            <p class="small text-muted mb-0">Peas and soy harvested from soils managed via carbon-sequestering, low-tillage agricultural techniques.</p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="col-md-4 reveal-on-scroll" style="transition-delay: 0.1s;">
+          <div class="journey-step bg-white p-3">
+            <img src="assets/images/home2_journey_science.png" alt="Lab extraction" class="rounded-3 mb-3">
+            <span class="badge bg-success-subtle text-success px-3 py-1 mb-2">Stage 02</span>
+            <h3 class="h5 fw-bold text-primary">FoodTech Processing</h3>
+            <p class="small text-muted mb-0">Proprietary dual-screw wet extrusion aligns legume plant cells to mimic the exact long-fiber density of animal meat.</p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="col-md-4 reveal-on-scroll" style="transition-delay: 0.2s;">
+          <div class="journey-step bg-white p-3">
+            <img src="assets/images/home2_journey_pack.png" alt="Eco Packaging" class="rounded-3 mb-3">
+            <span class="badge bg-success-subtle text-success px-3 py-1 mb-2">Stage 03</span>
+            <h3 class="h5 fw-bold text-primary">Green Logistics</h3>
+            <p class="small text-muted mb-0">Vacuum packed in fully biodegradable cellulose membranes, transported under sub-zero electric shipping lanes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENVIRONMENTAL BENEFITS (COUNTERS) -->
+  <section class="py-5 bg-dark text-white position-relative overflow-hidden">
+    <div class="organic-blob" style="background: radial-gradient(circle, rgba(76,166,107,0.1) 0%, rgba(0,0,0,0) 70%);"></div>
+    <div class="container py-5 text-center position-relative z-3">
+      <div class="row g-5">
+        <div class="col-md-4 reveal-on-scroll">
+          <div class="counter-num text-success" data-target="150" data-suffix="K+">0</div>
+          <p class="lead mt-3 mb-0">Metric Tons of CO2 Offset</p>
+        </div>
+        <div class="col-md-4 reveal-on-scroll" style="transition-delay: 0.1s;">
+          <div class="counter-num text-success" data-target="3.5" data-float="true" data-suffix="M">0</div>
+          <p class="lead mt-3 mb-0">Megaliters of Water Saved</p>
+        </div>
+        <div class="col-md-4 reveal-on-scroll" style="transition-delay: 0.2s;">
+          <div class="counter-num text-success" data-target="82" data-suffix="%">0</div>
+          <p class="lead mt-3 mb-0">Higher Feed Conversion Efficiency</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECIPE PREVIEW -->
+  <section class="py-5" style="background-color: var(--color-bg);">
+    <div class="container py-5">
+      <div class="row justify-content-between align-items-end mb-5 reveal-on-scroll">
+        <div class="col-md-8">
+          <h2 class="fw-bold mb-0">Inspiration from the Kitchen</h2>
+          <p class="lead text-muted mt-3 mb-0">Delight your guests. Discover clean, gourmet plant protein recipes designed by Michelin-recognized partners.</p>
+        </div>
+        <div class="col-md-3 text-md-end mt-3 mt-md-0">
+          <a href="recipes.html" class="btn btn-outline-premium">All Recipes</a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal-on-scroll">
+          <div class="card border-0 h-100 hover-lift shadow-sm rounded-4 overflow-hidden bg-white">
+            <img src="assets/images/home2_recipe_1.png" alt="Healthy Plate scramble" class="card-img-top" style="height: 250px; object-fit: cover;">
+            <div class="card-body p-4">
+              <span class="badge bg-success-subtle text-success mb-2">High Protein Breakfast</span>
+              <h3 class="h5 fw-bold text-primary">Sausage Scramble Bowl</h3>
+              <p class="small text-muted">A spicy breakfast blend of crumbled Italian sausages, avocado, roasted pepper slices, and toast.</p>
+              <a href="recipes.html" class="text-success fw-bold small text-decoration-none d-inline-flex align-items-center gap-1">Read Recipe <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHOLESALE CTA -->
+  <section class="py-5" style="background-color: var(--color-accent);">
+    <div class="container py-5">
+      <div class="glass-card p-5 border border-white position-relative overflow-hidden reveal-scale shadow-sm">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-3">Scale Your Operations with Premium Alternatives</h2>
+            <p class="lead mb-0 text-muted">Join hundreds of global distributors, school boards, restaurant groups, and grocery chains. Benefit from direct farm rates, low minimum order quantities, and co-branded marketing support assets.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="contact.html" class="btn btn-premium px-4 py-3">Become a Partner</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER minimal -->
+  <section class="py-5" style="background-color: var(--color-bg);">
+    <div class="container text-center py-4 reveal-on-scroll">
+      <h2 class="fw-bold">Sign Up for Fresh Updates</h2>
+      <p class="text-muted">Receive monthly digests regarding regional product rollouts, retail store openings, and organic recipe hacks.</p>
+      <div class="mx-auto mt-4" style="max-width: 500px;">
+        <form class="premium-form d-flex gap-2">
+          <input type="email" class="form-control premium-form-control" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-premium">Subscribe</button>
+        </form>
+        <div class="form-success-card mt-3">
+          <div class="text-success fs-2 mb-1"><i class="bi bi-check-circle-fill"></i></div>
+          <span class="small fw-bold">Subscribed! Welcome aboard.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <a class="d-flex align-items-center mb-3 text-white" href="index.html" style="font-weight: 800; font-size: 1.4rem; text-decoration: none; letter-spacing: -0.02em;">
+            <i class="bi bi-leaf-fill text-success me-2"></i><span style="color: var(--color-secondary);">VERDANT</span>
+          </a>
+          <p class="text-white-50 small mb-4">World-class alternative protein brands utilizing breakthrough FoodTech solutions to secure a highly nutritious, zero-carbon future for human nutrition.</p>
+          <div class="d-flex gap-3">
+            <a href="#" aria-label="LinkedIn" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Distributors</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="fw-bold text-white mb-3">Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="contact.html#faq">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Contact Sales</h5>
+          <p class="small text-white-50">Inquire about distribution rates, supply contracts, or retail shelf space parameters.</p>
+          <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> wholesale@verdantfoods.com</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> +1 (800) 555-VEGN</p>
+        </div>
+      </div>
+      <hr class="my-4 border-white-50">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <span class="small text-white-50">&copy; 2026 Verdant Foods Inc. All rights reserved.</span>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="small text-white-50 me-3">Privacy Policy</a>
+          <a href="#" class="small text-white-50">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <div class="back-to-top" id="back-to-top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up-short" style="font-size: 1.8rem;"></i>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

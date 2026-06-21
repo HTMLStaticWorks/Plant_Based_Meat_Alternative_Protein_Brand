@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products | Verdant Premium Catalog</title>
+  <meta name="description" content="Browse Verdant's catalog of high-protein burgers, gourmet sausages, versatile grounds, and quick ready meals. Formulated for culinary excellence.">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+  <style>
+    /* Unique Product Selector Design */
+    .product-selector-wrapper {
+      background: var(--color-bg);
+      border-radius: 30px;
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      box-shadow: 0 15px 40px var(--glass-shadow);
+    }
+    .product-tab-btn {
+      width: 100%;
+      text-align: left;
+      padding: 1.5rem;
+      border: none;
+      background: transparent;
+      color: var(--color-text);
+      font-weight: 600;
+      border-bottom: 1px solid var(--color-border);
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+    .product-tab-btn.active {
+      background-color: var(--color-accent);
+      color: var(--color-secondary);
+    }
+    .product-tab-btn.active::after {
+      content: '';
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background-color: var(--color-secondary);
+      border-radius: 50%;
+    }
+    .product-display-frame {
+      border-radius: 20px;
+      overflow: hidden;
+      height: 100%;
+      min-height: 350px;
+      border: 1px solid var(--color-border);
+    }
+    .product-display-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-smooth);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY HEADER -->
+  <nav class="navbar navbar-expand-lg premium-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-weight: 800; font-size: 1.6rem; color: var(--color-primary); letter-spacing: -0.02em;">
+        <i class="bi bi-leaf-fill text-success me-2"></i><span style="color: var(--color-secondary);">VERDANT</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home2 </a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>
+          <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Distributors</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm btn-outline-secondary border-0" id="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="bi bi-moon-fill" style="font-size: 1.2rem; color: var(--color-text);"></i>
+          </button>
+          <button class="btn btn-sm btn-outline-secondary border-0" id="rtl-toggle" aria-label="Toggle RTL">
+            <i class="bi bi-arrow-left-right" style="font-size: 1.2rem; color: var(--color-text);"></i>
+          </button>
+          <a class="btn-premium btn" href="contact.html">Distributor</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- EDITORIAL HERO -->
+  <header class="py-5 position-relative overflow-hidden d-flex align-items-center" style="background-color: var(--color-accent); padding-top: 150px; min-height: 350px;">
+    <div class="organic-blob" style="top: 0; left: 0;"></div>
+    <div class="container position-relative z-3 py-5">
+      <div class="row text-center justify-content-center">
+        <div class="col-lg-8 reveal-on-scroll">
+          <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill mb-3" style="font-weight: 600;">THE CATALOG</span>
+          <h1 class="display-4 fw-bold">The Alternative FoodTech Collection</h1>
+          <p class="lead text-muted mb-0">Discover textured plant proteins engineered for authentic bite, juiciness, and nutritional superiority. Click through our catalog below to explore specific products.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- INTERACTIVE PRODUCT SELECTOR -->
+  <section class="py-5" style="background-color: var(--color-bg);">
+    <div class="container py-5">
+      <div class="product-selector-wrapper">
+        <div class="row g-0">
+          <!-- Control Panel -->
+          <div class="col-lg-4 border-end">
+            <div class="d-flex flex-column h-100">
+              <div class="p-4 border-bottom bg-light bg-opacity-50">
+                <h4 class="fw-bold mb-1">Product Menu</h4>
+                <span class="small text-muted">Select a product to view specifications</span>
+              </div>
+              <div class="flex-grow-1" style="max-height: 600px; overflow-y: auto;">
+                <button class="product-tab-btn active" onclick="switchProduct('burger')">
+                  <i class="bi bi-circle-fill me-2 small text-success"></i> The Verdant Classic Burger
+                </button>
+                <button class="product-tab-btn" onclick="switchProduct('sausage')">
+                  <i class="bi bi-circle-fill me-2 small text-success"></i> Smoked Italian Sausages
+                </button>
+                <button class="product-tab-btn" onclick="switchProduct('mince')">
+                  <i class="bi bi-circle-fill me-2 small text-success"></i> Savory Ground Mince
+                </button>
+                <button class="product-tab-btn" onclick="switchProduct('meals')">
+                  <i class="bi bi-circle-fill me-2 small text-success"></i> Ready Quinoa Bowl
+                </button>
+                <button class="product-tab-btn" onclick="switchProduct('chicken')">
+                  <i class="bi bi-circle-fill me-2 small text-success"></i> Verdant Chick'n Cutlets
+                </button>
+                <button class="product-tab-btn" onclick="switchProduct('tempeh')">
+                  <i class="bi bi-circle-fill me-2 small text-success"></i> Pea Protein Tempeh
+                </button>
+                <button class="product-tab-btn" onclick="switchProduct('meatballs')">
+                  <i class="bi bi-circle-fill me-2 small text-success"></i> FoodTech Meatballs
+                </button>
+                <button class="product-tab-btn" onclick="switchProduct('bacon')">
+                  <i class="bi bi-circle-fill me-2 small text-success"></i> Smoked Bacon Strips
+                </button>
+                <button class="product-tab-btn" onclick="switchProduct('steak')">
+                  <i class="bi bi-circle-fill me-2 small text-success"></i> Salisbury Steak Alternative
+                </button>
+                <button class="product-tab-btn" onclick="switchProduct('veggie')">
+                  <i class="bi bi-circle-fill me-2 small text-success"></i> GF Garden Veggie Patties
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Display Content -->
+          <div class="col-lg-8">
+            <div class="p-5" id="product-content-area">
+              <div class="row align-items-stretch g-4">
+                <div class="col-md-6 d-flex flex-column">
+                  <div class="product-display-frame flex-grow-1">
+                    <img id="product-img" src="assets/images/home2_cat_burger.png" alt="Verdant Classic Burger">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <span class="text-uppercase small text-success fw-bold" id="product-category">Gourmet standard</span>
+                  <h2 class="fw-bold mb-3 mt-2" id="product-title">The Verdant Classic Burger</h2>
+                  <p class="text-muted small mb-4" id="product-desc">A thick, juicy burger patty designed for skillet grilling, holding its marbling juices and browning naturally. Formulated with zero synthetic preservatives.</p>
+                  
+                  <div class="border-top pt-3">
+                    <h5 class="fw-bold mb-2">Key Ingredients:</h5>
+                    <p class="small text-muted mb-4" id="product-ingredients">Water, pea protein isolate, cold-pressed canola oil, refined coconut oil, natural beet extract color, pea fiber, methylcellulose binder.</p>
+                  </div>
+
+                  <div class="border-top pt-3 mb-4">
+                    <div class="d-flex justify-content-between text-center g-2">
+                      <div class="px-2 border-end flex-grow-1">
+                        <span class="small text-muted d-block">Protein</span>
+                        <strong class="text-success" id="stat-protein">21g</strong>
+                      </div>
+                      <div class="px-2 border-end flex-grow-1">
+                        <span class="small text-muted d-block">Cholesterol</span>
+                        <strong class="text-success" id="stat-cholesterol">0mg</strong>
+                      </div>
+                      <div class="px-2 flex-grow-1">
+                        <span class="small text-muted d-block">Fiber</span>
+                        <strong class="text-success" id="stat-fiber">6g</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a href="contact.html" class="btn btn-premium w-100">Inquire Wholesale Supply</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUTRITIONAL BREAKDOWN (GRID) -->
+  <section class="py-5" style="background-color: var(--color-accent);">
+    <div class="container py-5">
+      <div class="row justify-content-center text-center mb-5 reveal-on-scroll">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Analytical Comparison</h2>
+          <p class="lead text-muted">Review how our plant-based products stack up nutritionally against industrial beef and pork alternatives.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center text-center align-items-center g-4">
+        <div class="col-lg-10 reveal-scale">
+          <div class="nutrition-grid-wrapper shadow-lg">
+            <div class="nutrition-grid cols-4 border-0 bg-white text-start">
+              <div class="nutrition-row fw-bold text-white" style="background-color: var(--color-primary) !important;">
+                <span>Metrics (Per 100g)</span>
+                <span>Beef Patty (80/20)</span>
+                <span>Pork Sausage Link</span>
+                <span>Verdant Classic Patty</span>
+              </div>
+              <div class="nutrition-row">
+                <span class="fw-bold">Protein density</span>
+                <span>17.4g</span>
+                <span>15.2g</span>
+                <span class="text-success fw-bold">20.5g</span>
+              </div>
+              <div class="nutrition-row">
+                <span class="fw-bold">Total Fat</span>
+                <span>20g</span>
+                <span>28g</span>
+                <span class="text-success fw-bold">14g</span>
+              </div>
+              <div class="nutrition-row">
+                <span class="fw-bold">Saturated Fat</span>
+                <span>7.6g</span>
+                <span>10.1g</span>
+                <span class="text-success fw-bold">2.5g</span>
+              </div>
+              <div class="nutrition-row">
+                <span class="fw-bold">Trans Fat</span>
+                <span>1.1g</span>
+                <span>0.4g</span>
+                <span class="text-success fw-bold">0.0g</span>
+              </div>
+              <div class="nutrition-row">
+                <span class="fw-bold">Dietary Fiber</span>
+                <span>0g</span>
+                <span>0g</span>
+                <span class="text-success fw-bold">6.0g</span>
+              </div>
+              <div class="nutrition-row">
+                <span class="fw-bold">Carbon Cost (kg CO2e)</span>
+                <span>27.0</span>
+                <span>7.2</span>
+                <span class="text-success fw-bold">1.8</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-start mt-3 small text-muted">*Data based on standard USDA nutritional analysis and ecological lifecycle analysis metrics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHOLESALE INQUIRY CTA -->
+  <section class="py-5" style="background-color: var(--color-bg);">
+    <div class="container py-5 text-center reveal-on-scroll">
+      <h2 class="fw-bold mb-3">Distribute the Future of Protein</h2>
+      <p class="lead text-muted mb-4">Become an authorized regional wholesale partner. Access direct farm rates, low minimum order quantities, and custom shipping options.</p>
+      <a href="contact.html" class="btn btn-premium px-5 py-3">Become a Partner Today</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <a class="d-flex align-items-center mb-3 text-white" href="index.html" style="font-weight: 800; font-size: 1.4rem; text-decoration: none; letter-spacing: -0.02em;">
+            <i class="bi bi-leaf-fill text-success me-2"></i><span style="color: var(--color-secondary);">VERDANT</span>
+          </a>
+          <p class="text-white-50 small mb-4">World-class alternative protein brands utilizing breakthrough FoodTech solutions to secure a highly nutritious, zero-carbon future for human nutrition.</p>
+          <div class="d-flex gap-3">
+            <a href="#" aria-label="LinkedIn" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Distributors</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="fw-bold text-white mb-3">Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="contact.html#faq">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Contact Sales</h5>
+          <p class="small text-white-50">Inquire about distribution rates, supply contracts, or retail shelf space parameters.</p>
+          <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> wholesale@verdantfoods.com</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> +1 (800) 555-VEGN</p>
+        </div>
+      </div>
+      <hr class="my-4 border-white-50">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <span class="small text-white-50">&copy; 2026 Verdant Foods Inc. All rights reserved.</span>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="small text-white-50 me-3">Privacy Policy</a>
+          <a href="#" class="small text-white-50">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <div class="back-to-top" id="back-to-top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up-short" style="font-size: 1.8rem;"></i>
+  </div>
+
+  <!-- Tab Switcher Logic -->
+  <script>
+    const productsData = {
+      burger: {
+        category: "Gourmet standard",
+        title: "The Verdant Classic Burger",
+        desc: "A thick, juicy burger patty designed for skillet grilling, holding its marbling juices and browning naturally. Formulated with zero synthetic preservatives.",
+        ingredients: "Water, pea protein isolate, cold-pressed canola oil, refined coconut oil, natural beet extract color, pea fiber, methylcellulose binder.",
+        protein: "21g",
+        cholesterol: "0mg",
+        fiber: "6g",
+        img: "assets/images/home2_cat_burger.png"
+      },
+      sausage: {
+        category: "Artisan links",
+        title: "Smoked Italian Sausages",
+        desc: "Infused with toasted fennel seeds, crushed garlic, and black pepper. Features a vegetable casing that yields an authentic snap when griddled.",
+        ingredients: "Water, texturized soy flour, refined sunflower oil, organic spices (fennel, garlic, pepper), sodium alginate shell, brown rice protein, natural hickory smoke flavor.",
+        protein: "16g",
+        cholesterol: "0mg",
+        fiber: "4g",
+        img: "assets/images/home_prod_sausage.png"
+      },
+      mince: {
+        category: "Culinary versatility",
+        title: "Savory Ground Mince",
+        desc: "Engineered to crumble and absorb marinades, stocks, and fats effortlessly. Ideal for Bolognese sauces, taco plates, and hand-rolled meatballs.",
+        ingredients: "Legume isolate mix (peas, mung beans), extra virgin olive oil, tapioca starch, natural yeast extracts, vegetable juices for coloring, organic onion spices.",
+        protein: "18g",
+        cholesterol: "0mg",
+        fiber: "5g",
+        img: "assets/images/home_prod_mince.png"
+      },
+      meals: {
+        category: "Gourmet convenience",
+        title: "Ready Quinoa Bowl",
+        desc: "A balanced, complete ready-to-heat meal. Combines our signature seasoned plant mince with tri-color quinoa, steamed organic kale, and a tahini lemon dressing.",
+        ingredients: "Tri-color quinoa, plant mince, steamed organic kale, water, tahini, lemon juice, extra virgin olive oil, sea salt, organic garlic powder.",
+        protein: "19g",
+        cholesterol: "0mg",
+        fiber: "8g",
+        img: "assets/images/home2_cat_meals.png"
+      },
+      chicken: {
+        category: "Poultry alternative",
+        title: "Verdant Chick'n Cutlets",
+        desc: "Crispy-edged, high-moisture extruded plant-based chicken breasts with a fibrous muscle-like texture. Perfect for pan-frying, baking, or slicing into premium salads.",
+        ingredients: "Water, textured wheat protein, soy protein concentrate, sunflower oil, natural yeast-derived chicken flavor, pea starch, sea salt.",
+        protein: "20g",
+        cholesterol: "0mg",
+        fiber: "3g",
+        img: "assets/images/recipes_lunch.png"
+      },
+      tempeh: {
+        category: "Fermented nutrition",
+        title: "Pea Protein Tempeh",
+        desc: "An artisan fermented bean-and-pea cake, combining whole pulses with pea protein crispies for a nutty, earthy flavor and exceptional digestibility.",
+        ingredients: "Organic whole yellow peas, water, pea protein isolate, organic vinegar, starter culture (Rhizopus oligosporus).",
+        protein: "22g",
+        cholesterol: "0mg",
+        fiber: "9g",
+        img: "assets/images/about_ingredients.png"
+      },
+      meatballs: {
+        category: "Italian tradition",
+        title: "FoodTech Meatballs",
+        desc: "Juicy, savory meatballs seasoned with fresh parsley, garlic, and grated plant-based parmesan. Holds shape perfectly in simmering marinara sauces.",
+        ingredients: "Water, pea protein concentrate, coconut oil, canola oil, methylcellulose, yeast extract, dehydrated garlic, fresh parsley, vegan cheese alternative.",
+        protein: "17g",
+        cholesterol: "0mg",
+        fiber: "5g",
+        img: "assets/images/recipes_dinner.png"
+      },
+      bacon: {
+        category: "Breakfast savory",
+        title: "Smoked Bacon Strips",
+        desc: "Crispy, woodsmoke-cured strips that curl and sizzle in the pan. Delivers a perfectly balanced salty-sweet crunch and authentic bacon aroma.",
+        ingredients: "Water, vital wheat gluten, organic soy sauce, maple syrup, liquid smoke flavor, coconut oil, beetroot juice concentrate, organic paprika.",
+        protein: "12g",
+        cholesterol: "0mg",
+        fiber: "2g",
+        img: "assets/images/home2_cat_sausage.png"
+      },
+      steak: {
+        category: "Gourmet cut",
+        title: "Salisbury Steak Alternative",
+        desc: "A tender, slow-simmered steak alternative that mimics beef muscle fibers. Rich in iron, zinc, and Vitamin B12, ideal for mushroom gravy pairing.",
+        ingredients: "Water, texturized soy and pea protein, extra virgin olive oil, barley malt extract, natural flavorings, cocoa butter, iron pyrophosphate, Vitamin B12.",
+        protein: "24g",
+        cholesterol: "0mg",
+        fiber: "7g",
+        img: "assets/images/recipes_breakfast.png"
+      },
+      veggie: {
+        category: "Wholefood classic",
+        title: "GF Garden Veggie Patties",
+        desc: "A gluten-free patty packed with real organic broccoli, carrots, sweet corn, and edamame, lightly bound with brown rice and potato starch.",
+        ingredients: "Organic edamame, organic broccoli, organic carrots, organic sweet corn, brown rice, potato starch, extra virgin olive oil, onion powder, sea salt.",
+        protein: "10g",
+        cholesterol: "0mg",
+        fiber: "8g",
+        img: "assets/images/about_story.png"
+      }
+    };
+
+    function switchProduct(key) {
+      // Manage active states
+      const buttons = document.querySelectorAll('.product-tab-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      
+      const activeBtn = event.currentTarget;
+      activeBtn.classList.add('active');
+      
+      const data = productsData[key];
+      
+      // Update text details
+      document.getElementById('product-category').innerText = data.category;
+      document.getElementById('product-title').innerText = data.title;
+      document.getElementById('product-desc').innerText = data.desc;
+      document.getElementById('product-ingredients').innerText = data.ingredients;
+      
+      // Update stats
+      document.getElementById('stat-protein').innerText = data.protein;
+      document.getElementById('stat-cholesterol').innerText = data.cholesterol;
+      document.getElementById('stat-fiber').innerText = data.fiber;
+      
+      // Update image with smooth fade-in
+      const img = document.getElementById('product-img');
+      img.style.opacity = 0;
+      setTimeout(() => {
+        img.src = data.img;
+        img.alt = data.title;
+        img.style.opacity = 1;
+      }, 200);
+    }
+  </script>
+
+  <!-- Bootstrap 5 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

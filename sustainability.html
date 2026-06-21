@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainability & Nutrition | Verdant EcoTech</title>
+  <meta name="description" content="Discover Verdant's environmental benchmarks. We save 99% water and 90% carbon compared to animal farming while providing complete clean protein.">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+  <style>
+    /* Unique Circular SVG Progress Meters */
+    .metric-ring-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+    }
+    .metric-ring-svg {
+      transform: rotate(-90deg);
+      width: 100%;
+      height: 100%;
+    }
+    .metric-ring-bg {
+      fill: none;
+      stroke: var(--color-border);
+      stroke-width: 10;
+    }
+    .metric-ring-fill {
+      fill: none;
+      stroke: var(--color-secondary);
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-dasharray: 440;
+      stroke-dashoffset: 440;
+      transition: stroke-dashoffset 2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .metric-ring-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+    /* Comparison Bar Chart */
+    .compare-bar {
+      height: 20px;
+      border-radius: 10px;
+      background-color: var(--color-border);
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+    }
+    .compare-fill-red {
+      height: 100%;
+      background-color: #dc3545;
+      width: 100%;
+    }
+    .compare-fill-green {
+      height: 100%;
+      background-color: var(--color-secondary);
+      width: 0;
+      transition: width 1.5s ease-out;
+    }
+    /* Asymmetric grid styling */
+    .asymmetric-col-tall {
+      padding-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY HEADER -->
+  <nav class="navbar navbar-expand-lg premium-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-weight: 800; font-size: 1.6rem; color: var(--color-primary); letter-spacing: -0.02em;">
+        <i class="bi bi-leaf-fill text-success me-2"></i><span style="color: var(--color-secondary);">VERDANT</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home2 </a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link active" href="sustainability.html">Sustainability</a></li>
+          <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Distributors</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm btn-outline-secondary border-0" id="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="bi bi-moon-fill" style="font-size: 1.2rem; color: var(--color-text);"></i>
+          </button>
+          <button class="btn btn-sm btn-outline-secondary border-0" id="rtl-toggle" aria-label="Toggle RTL">
+            <i class="bi bi-arrow-left-right" style="font-size: 1.2rem; color: var(--color-text);"></i>
+          </button>
+          <a class="btn-premium btn" href="contact.html">Distributor</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- TYPOGRAPHY HERO -->
+  <header class="py-5 position-relative overflow-hidden d-flex align-items-center" style="background-color: var(--color-accent); padding-top: 150px; min-height: 380px;">
+    <div class="organic-blob" style="bottom: 0; right: 0;"></div>
+    <div class="container position-relative z-3 py-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 reveal-on-scroll">
+          <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill mb-3" style="font-weight: 600;">ECOLOGICAL BALANCE</span>
+          <h1 class="display-4 fw-bold">Preserving Earth's Resources</h1>
+          <p class="lead text-muted mb-0">Discover the environmental savings of alternative proteins. We reduce the land and freshwater requirements of our food system by bypass-processing crop protein directly.</p>
+        </div>
+        <div class="col-lg-5 text-center reveal-scale">
+          <img src="assets/images/home_sustain_chart.png" alt="Ecological glass globe showing earth seedlings" class="img-fluid rounded-4 shadow-lg border border-1 border-white" style="max-height: 280px; width: 100%; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- INTERACTIVE ECOLOGICAL METERS -->
+  <section class="py-5 bg-white" style="background-color: var(--color-bg) !important;">
+    <div class="container py-5">
+      <div class="row justify-content-center text-center mb-5 reveal-on-scroll">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Dynamic Environmental Savings</h2>
+          <p class="lead text-muted">Scroll down to observe how our legume texturizing processes compare to standard animal husbandry operations.</p>
+        </div>
+      </div>
+
+      <div class="row g-5 justify-content-center text-center">
+        <!-- CO2 savings -->
+        <div class="col-md-4 reveal-on-scroll">
+          <div class="glass-card p-4 h-100 border">
+            <div class="metric-ring-container mb-3">
+              <svg class="metric-ring-svg">
+                <circle class="metric-ring-bg" cx="75" cy="75" r="70" />
+                <circle class="metric-ring-fill" id="co2-ring" cx="75" cy="75" r="70" />
+              </svg>
+              <div class="metric-ring-label">90%</div>
+            </div>
+            <h4 class="fw-bold mb-2">CO2 Reduction</h4>
+            <p class="small text-muted mb-0">Emits a small fraction of the greenhouse gases produced by cattle farming.</p>
+          </div>
+        </div>
+
+        <!-- Water savings -->
+        <div class="col-md-4 reveal-on-scroll" style="transition-delay: 0.1s;">
+          <div class="glass-card p-4 h-100 border">
+            <div class="metric-ring-container mb-3">
+              <svg class="metric-ring-svg">
+                <circle class="metric-ring-bg" cx="75" cy="75" r="70" />
+                <circle class="metric-ring-fill" id="water-ring" cx="75" cy="75" r="70" />
+              </svg>
+              <div class="metric-ring-label">99%</div>
+            </div>
+            <h4 class="fw-bold mb-2">Water Saved</h4>
+            <p class="small text-muted mb-0">Conserves thousands of gallons of freshwater per dry kilogram produced.</p>
+          </div>
+        </div>
+
+        <!-- Land savings -->
+        <div class="col-md-4 reveal-on-scroll" style="transition-delay: 0.2s;">
+          <div class="glass-card p-4 h-100 border">
+            <div class="metric-ring-container mb-3">
+              <svg class="metric-ring-svg">
+                <circle class="metric-ring-bg" cx="75" cy="75" r="70" />
+                <circle class="metric-ring-fill" id="land-ring" cx="75" cy="75" r="70" />
+              </svg>
+              <div class="metric-ring-label">93%</div>
+            </div>
+            <h4 class="fw-bold mb-2">Land Saved</h4>
+            <p class="small text-muted mb-0">Bypasses crop-to-feed conversion layouts, lowering forest clearing scales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARBON COMPARISON DASHBOARD -->
+  <section class="py-5" style="background-color: var(--color-accent);">
+    <div class="container py-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal-on-scroll">
+          <h2 class="fw-bold">Lifecycle Analysis</h2>
+          <p class="lead text-muted mb-4">We audit our entire supply chain from grain harvest down to factory packing tables. Here is how our carbon output compares directly to standard beef burger patties.</p>
+          
+          <!-- Beef Patty Bar -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between mb-2 small fw-bold">
+              <span>Beef Patty (1kg)</span>
+              <span class="text-danger">27.0 kg CO2e</span>
+            </div>
+            <div class="compare-bar">
+              <div class="compare-fill-red"></div>
+            </div>
+          </div>
+
+          <!-- Verdant Patty Bar -->
+          <div>
+            <div class="d-flex justify-content-between mb-2 small fw-bold">
+              <span>Verdant Patty (1kg)</span>
+              <span class="text-success" id="verdant-co2-val">1.8 kg CO2e</span>
+            </div>
+            <div class="compare-bar">
+              <div class="compare-fill-green" id="verdant-bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal-scale">
+          <img src="assets/images/home2_journey_farm.png" alt="Crop field farming landscape" class="img-fluid rounded-4 shadow-lg border" style="width: 100%; height: 350px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASYMMETRIC HEALTH & NUTRITION CARDS -->
+  <section class="py-5" style="background-color: var(--color-bg);">
+    <div class="container py-5">
+      <div class="row justify-content-center text-center mb-5 reveal-on-scroll">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Optimal Biomarker Nutrition</h2>
+          <p class="lead text-muted">Nutritional metrics compiled to maximize cardiovascular efficiency, digestibility, and energy retention.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-lg-4 reveal-on-scroll">
+          <div class="glass-card h-100 p-4 border bg-white">
+            <span class="badge bg-success-subtle text-success px-3 py-1 mb-3">DIGESTIVE HEALTH</span>
+            <h3 class="h5 fw-bold text-primary mb-3">Prebiotic Fiber</h3>
+            <p class="small text-muted mb-4">Legumes naturally contain prebiotic fibers that support digestive gut flora. Standard animal meats are completely free of dietary fiber.</p>
+            <img src="assets/images/home2_recipe_1.png" alt="Healthy fresh breakfast salad" class="img-fluid rounded-3" style="width: 100%; height: 180px; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Card 2 (Asymmetric offset height) -->
+        <div class="col-lg-4 reveal-on-scroll asymmetric-col-tall">
+          <div class="glass-card h-100 p-4 border bg-white">
+            <span class="badge bg-success-subtle text-success px-3 py-1 mb-3">HEART HEALTH</span>
+            <h3 class="h5 fw-bold text-primary mb-3">Zero Cholesterol</h3>
+            <p class="small text-muted mb-4">Because plant cells rely on phytosterols rather than animal fats, our products contain zero cholesterol, supporting arterial elasticity.</p>
+            <img src="assets/images/home_hero_bg.png" alt="Gourmet alternative cheeseburger" class="img-fluid rounded-3" style="width: 100%; height: 180px; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 reveal-on-scroll">
+          <div class="glass-card h-100 p-4 border bg-white">
+            <span class="badge bg-success-subtle text-success px-3 py-1 mb-3">AMINO STABILITY</span>
+            <h3 class="h5 fw-bold text-primary mb-3">Complete Protein Profile</h3>
+            <p class="small text-muted mb-4">Our proprietary pea-mung-rice blend compiles all 9 essential amino acids required for muscle synthesis and metabolic health.</p>
+            <img src="assets/images/home2_journey_science.png" alt="Alternative protein extrusion lab research" class="img-fluid rounded-3" style="width: 100%; height: 180px; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE (NET-ZERO PLAN) -->
+  <section class="py-5" style="background-color: var(--color-accent);">
+    <div class="container py-5">
+      <div class="row justify-content-center text-center mb-5 reveal-on-scroll">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Roadmap to Net-Zero Emissions</h2>
+          <p class="lead text-muted">Our targets are audited by international auditing boards for compliance.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8 reveal-on-scroll">
+          <div class="timeline-system">
+            <div class="timeline-item">
+              <span class="badge bg-success-subtle text-success px-3 py-1 mb-2">2026 — Current Target</span>
+              <h4 class="fw-bold text-primary">Closed-loop Extraction</h4>
+              <p class="text-muted small">Achieve 95% water recovery rates at our wet texturizing extrusion facilities.</p>
+            </div>
+            <div class="timeline-item" style="border-left-color: transparent;">
+              <span class="badge bg-success-subtle text-success px-3 py-1 mb-2">2030 — Final Target</span>
+              <h4 class="fw-bold text-primary">Fully Carbon-Neutral Delivery Fleet</h4>
+              <p class="text-muted small">Transition 100% of national delivery logistics to electric heavy vehicles charged via on-site solar systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <a class="d-flex align-items-center mb-3 text-white" href="index.html" style="font-weight: 800; font-size: 1.4rem; text-decoration: none; letter-spacing: -0.02em;">
+            <i class="bi bi-leaf-fill text-success me-2"></i><span style="color: var(--color-secondary);">VERDANT</span>
+          </a>
+          <p class="text-white-50 small mb-4">World-class alternative protein brands utilizing breakthrough FoodTech solutions to secure a highly nutritious, zero-carbon future for human nutrition.</p>
+          <div class="d-flex gap-3">
+            <a href="#" aria-label="LinkedIn" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Distributors</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="fw-bold text-white mb-3">Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="contact.html#faq">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Contact Sales</h5>
+          <p class="small text-white-50">Inquire about distribution rates, supply contracts, or retail shelf space parameters.</p>
+          <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> wholesale@verdantfoods.com</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> +1 (800) 555-VEGN</p>
+        </div>
+      </div>
+      <hr class="my-4 border-white-50">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <span class="small text-white-50">&copy; 2026 Verdant Foods Inc. All rights reserved.</span>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="small text-white-50 me-3">Privacy Policy</a>
+          <a href="#" class="small text-white-50">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <div class="back-to-top" id="back-to-top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up-short" style="font-size: 1.8rem;"></i>
+  </div>
+
+  <!-- SVG Circle Animation Trigger -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Circle settings (R=70, Circ=440)
+      const co2Ring = document.getElementById('co2-ring');
+      const waterRing = document.getElementById('water-ring');
+      const landRing = document.getElementById('land-ring');
+      const compareBar = document.getElementById('verdant-bar');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Animate SVG circle strokes
+            animateRing(co2Ring, 90);
+            animateRing(waterRing, 99);
+            animateRing(landRing, 93);
+            
+            // Animate lifecycle comparison bar
+            if (compareBar) {
+              // The bar scale is (1.8 / 27) = ~6.6% width compared to beef's 100%
+              compareBar.style.width = '6.6%';
+            }
+          }
+        });
+      }, { threshold: 0.1 });
+
+      // Observe the rings
+      const ringsSection = document.querySelector('.metric-ring-container');
+      if (ringsSection) observer.observe(ringsSection);
+    });
+
+    function animateRing(ring, percent) {
+      if (!ring) return;
+      const circumference = 440;
+      const offset = circumference - (percent / 100) * circumference;
+      ring.style.strokeDashoffset = offset;
+    }
+  </script>
+
+  <!-- Bootstrap 5 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
