@@ -635,10 +635,18 @@ footer a.d-flex.align-items-center:hover i {
 
 .logo-slide {
   width: 250px;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
+  white-space: nowrap;
+}
+
+.logo-slide span {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
 }
 
 .logo-slide img {
