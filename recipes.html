@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -10,14 +10,15 @@
   <!-- Bootstrap Icons CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom CSS -->
-  <link href="assets/css/styles.css" rel="stylesheet">
+  <link href="assets/css/styles.css?v=1.4" rel="stylesheet">
   <!-- Favicon SVG -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>??</text></svg>">
   <style>
     /* Redesigned 3-Column Recipe Grid */
     .recipe-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 2rem;
     }
     .recipe-card {
@@ -27,7 +28,8 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      height: 100%;
+      height: auto;
+      width: calc(33.333% - 1.34rem);
       transition: var(--transition-smooth);
     }
     .recipe-card-img {
@@ -46,13 +48,13 @@
     }
     
     @media (max-width: 991.98px) {
-      .recipe-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .recipe-card {
+        width: calc(50% - 1rem);
       }
     }
     @media (max-width: 767.98px) {
-      .recipe-grid {
-        grid-template-columns: 1fr;
+      .recipe-card {
+        width: 100%;
       }
     }
 
@@ -124,7 +126,7 @@
   <nav class="navbar navbar-expand-lg premium-navbar">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-weight: 800; font-size: 1.6rem; color: var(--color-primary); letter-spacing: -0.02em;">
-        <i class="bi bi-leaf-fill text-success me-2"></i><span style="color: var(--color-secondary);">VERDANT</span>
+        <img src="assets/images/logo.svg" alt="Verdant Logo" class="brand-logo me-2"><span style="color: var(--color-secondary);">VERDANT</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -146,7 +148,7 @@
           <button class="btn btn-sm btn-outline-secondary border-0" id="rtl-toggle" aria-label="Toggle RTL">
             <i class="bi bi-arrow-left-right" style="font-size: 1.2rem; color: var(--color-text);"></i>
           </button>
-          <a class="btn-premium btn" href="contact.html">Distributor</a>
+          <a class="btn-premium btn" href="contact.html">Partner</a>
         </div>
       </div>
     </div>
@@ -187,7 +189,7 @@
             <div>
               <span class="badge bg-success-subtle text-success mb-2">High Protein Breakfast</span>
               <h3 class="fw-bold mb-2">Sausage Scramble Bowl</h3>
-              <p class="small text-muted mb-4">A spicy, high-protein breakfast scramble containing sliced sausage crumbles, avocado wedges, sautéed peppers, and fresh greens.</p>
+              <p class="small text-muted mb-4">A spicy, high-protein breakfast scramble containing sliced sausage crumbles, avocado wedges, saut?ed peppers, and fresh greens.</p>
             </div>
             <div class="d-flex justify-content-between border-top pt-3 text-muted small">
               <span><i class="bi bi-clock me-1"></i> 20 Mins</span>
@@ -372,7 +374,7 @@
       <div class="row g-4 justify-content-center">
         <!-- Card 1 -->
         <div class="col-md-5 reveal-on-scroll">
-          <div class="glass-card p-4 border d-flex align-items-center gap-4">
+          <div class="glass-card p-4 border d-flex align-items-center gap-4 h-100">
             <div class="fs-1 text-success"><i class="bi bi-file-earmark-pdf-fill"></i></div>
             <div class="flex-grow-1">
               <h4 class="h5 fw-bold mb-1">Kitchen Prep Manual</h4>
@@ -386,7 +388,7 @@
 
         <!-- Card 2 -->
         <div class="col-md-5 reveal-on-scroll" style="transition-delay: 0.1s;">
-          <div class="glass-card p-4 border d-flex align-items-center gap-4">
+          <div class="glass-card p-4 border d-flex align-items-center gap-4 h-100">
             <div class="fs-1 text-success"><i class="bi bi-file-earmark-pdf-fill"></i></div>
             <div class="flex-grow-1">
               <h4 class="h5 fw-bold mb-1">Brand Shelf Templates</h4>
@@ -405,9 +407,9 @@
   <footer>
     <div class="container">
       <div class="row g-4">
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 col-6">
           <a class="d-flex align-items-center mb-3 text-white" href="index.html" style="font-weight: 800; font-size: 1.4rem; text-decoration: none; letter-spacing: -0.02em;">
-            <i class="bi bi-leaf-fill text-success me-2"></i><span style="color: var(--color-secondary);">VERDANT</span>
+            <img src="assets/images/logo.svg" alt="Verdant Logo" class="brand-logo me-2"><span style="color: var(--color-secondary);">VERDANT</span>
           </a>
           <p class="text-white-50 small mb-4">World-class alternative protein brands utilizing breakthrough FoodTech solutions to secure a highly nutritious, zero-carbon future for human nutrition.</p>
           <div class="d-flex gap-3">
@@ -416,7 +418,7 @@
             <a href="#" aria-label="Twitter" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
           </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-6">
+        <div class="col-lg-2 col-md-6 col-6">
           <h5 class="fw-bold text-white mb-3">Quick Links</h5>
           <ul class="list-unstyled">
             <li><a href="index.html">Home</a></li>
@@ -425,7 +427,7 @@
             <li><a href="contact.html">Distributors</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 col-md-3 col-6">
+        <div class="col-lg-2 col-md-6 col-6">
           <h5 class="fw-bold text-white mb-3">Resources</h5>
           <ul class="list-unstyled">
             <li><a href="sustainability.html">Sustainability</a></li>
@@ -433,7 +435,7 @@
             <li><a href="contact.html#faq">FAQs</a></li>
           </ul>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 col-6">
           <h5 class="fw-bold text-white mb-3">Contact Sales</h5>
           <p class="small text-white-50">Inquire about distribution rates, supply contracts, or retail shelf space parameters.</p>
           <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> wholesale@verdantfoods.com</p>
@@ -495,6 +497,6 @@
   <!-- Bootstrap 5 JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
-  <script src="assets/js/app.js"></script>
+  <script src="assets/js/app.js?v=1.4"></script>
 </body>
 </html>

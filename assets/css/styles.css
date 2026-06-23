@@ -18,7 +18,7 @@
   --color-bg: #ffffff;
   --color-card-bg: rgba(255, 255, 255, 0.7);
   --color-text: #112d1d;
-  --color-text-muted: #4e6356;
+  --color-text-muted: #1c2a21;
   --color-border: rgba(17, 45, 29, 0.1);
   --glass-bg: rgba(255, 255, 255, 0.45);
   --glass-border: rgba(255, 255, 255, 0.25);
@@ -96,7 +96,7 @@ h3, .h3 {
 p, .body-text {
   font-size: clamp(0.95rem, 2vw, 1.1rem);
   color: var(--color-text-muted);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* RTL OVERRIDES */
@@ -370,8 +370,23 @@ p, .body-text {
 .counter-num {
   font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 700;
-  color: var(--color-secondary);
+  color: #225434;
   line-height: 1;
+}
+[data-theme="dark"] .counter-num {
+  color: var(--color-secondary) !important;
+}
+.counter-suffix {
+  font-size: 0.5em;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateY(-0.15em);
+  margin-left: 0.05em;
+}
+.glass-card .d-flex .text-uppercase {
+  position: relative;
+  top: 6px;
 }
 
 /* METRICS & PROGRESS BARS */
@@ -531,20 +546,24 @@ footer a.d-flex.align-items-center:hover i {
 
 /* PREMIUM FORMS */
 .premium-form-control {
-  background: var(--color-bg);
+  background-color: var(--color-bg);
   border: 1px solid var(--color-border);
-  color: var(--color-text);
+  color: var(--color-text) !important;
   padding: 0.9rem 1.2rem;
   border-radius: 12px;
   font-size: 1rem;
   transition: var(--transition-smooth);
 }
+.premium-form-control::placeholder {
+  color: var(--color-text-muted) !important;
+  opacity: 0.7;
+}
 
 .premium-form-control:focus {
-  background: var(--color-bg);
+  background-color: var(--color-bg);
   border-color: var(--color-secondary);
   box-shadow: 0 0 0 3px rgba(76, 166, 107, 0.15);
-  color: var(--color-text);
+  color: var(--color-text) !important;
   outline: none;
 }
 
@@ -703,10 +722,25 @@ footer a.d-flex.align-items-center:hover i {
   color: var(--color-primary) !important;
 }
 .text-success {
+  color: #225434 !important;
+}
+[data-theme="dark"] .text-success {
   color: var(--color-secondary) !important;
 }
 .navbar-brand {
   color: var(--color-primary) !important;
+}
+.brand-logo {
+  height: 2.2rem;
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition-smooth);
+}
+[data-theme="dark"] .brand-logo {
+  filter: drop-shadow(0 0 6px rgba(76, 166, 107, 0.3));
+}
+footer .brand-logo {
+  height: 1.8rem;
 }
 
 [data-theme="dark"] .text-primary {
@@ -721,7 +755,11 @@ footer a.d-flex.align-items-center:hover i {
 [data-theme="dark"] .navbar-brand span {
   color: #ffffff !important;
 }
-[data-theme="dark"] .text-muted {
+.text-muted {
+  color: var(--color-text-muted) !important;
+  opacity: 1 !important;
+}
+.lead {
   color: var(--color-text-muted) !important;
 }
 [data-theme="dark"] .text-dark {
@@ -798,4 +836,46 @@ footer a.d-flex.align-items-center:hover i {
 .social-hover:hover {
   transform: translateY(-3px) scale(1.15);
   color: var(--color-secondary) !important;
+}
+
+/* Testimonial Author Text Contrast Override */
+.testimonial-slide span {
+  font-weight: 600;
+  color: var(--color-text) !important;
+  opacity: 0.85;
+}
+
+/* Transparent Navbar contrast overrides for dark headers (Home 2 fullscreen-hero) */
+body:has(.fullscreen-hero) .premium-navbar:not(.scrolled) .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+body:has(.fullscreen-hero) .premium-navbar:not(.scrolled) .nav-link:hover,
+body:has(.fullscreen-hero) .premium-navbar:not(.scrolled) .nav-link.active {
+  color: #ffffff !important;
+}
+body:has(.fullscreen-hero) .premium-navbar:not(.scrolled) .navbar-brand {
+  color: #ffffff !important;
+}
+body:has(.fullscreen-hero) .premium-navbar:not(.scrolled) .navbar-brand span {
+  color: var(--color-secondary) !important;
+}
+body:has(.fullscreen-hero) .premium-navbar:not(.scrolled) .navbar-toggler-icon {
+  filter: invert(1) brightness(2) !important;
+}
+body:has(.fullscreen-hero) .premium-navbar:not(.scrolled) #theme-toggle i,
+body:has(.fullscreen-hero) .premium-navbar:not(.scrolled) #rtl-toggle i {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Category Overlay Cards Text Specificity Overrides */
+.category-card-content h3 {
+  color: #ffffff !important;
+}
+.category-card-content p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Ensure text and long emails break cleanly inside 50% footer columns on small devices */
+footer a, footer p {
+  word-break: break-word;
 }

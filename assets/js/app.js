@@ -85,29 +85,22 @@ function initNavbarScroll() {
 // --- SCROLLSPY ACTIVE NAV HIGHLIGHT ---
 function initScrollspy() {
   const navLinks = document.querySelectorAll('.premium-navbar .nav-link');
-  const sections = document.querySelectorAll('section[id]');
-  
-  if (sections.length === 0) return;
+  const path = window.location.pathname;
+  const page = path.split("/").pop();
 
-  window.addEventListener('scroll', () => {
-    let currentId = '';
-    const scrollPos = window.scrollY + 200;
-
-    sections.forEach(sec => {
-      const top = sec.offsetTop;
-      const height = sec.offsetHeight;
-      if (scrollPos >= top && scrollPos < top + height) {
-        currentId = sec.getAttribute('id');
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    const href = link.getAttribute('href');
+    
+    // Normalize href and check match
+    if (page === '' || page === 'index.html') {
+      if (href === 'index.html') {
+        link.classList.add('active');
       }
-    });
-
-    if (currentId) {
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(currentId)) {
-          link.classList.add('active');
-        }
-      });
+    } else {
+      if (href && href.includes(page)) {
+        link.classList.add('active');
+      }
     }
   });
 }
@@ -160,9 +153,11 @@ function animateCounter(el) {
   const updateCount = () => {
     start += increment;
     if (start >= target) {
-      el.textContent = (isFloat ? target.toFixed(1) : Math.floor(target)) + suffix;
+      const finalVal = isFloat ? target.toFixed(1) : Math.floor(target);
+      el.innerHTML = `${finalVal}<span class="counter-suffix">${suffix}</span>`;
     } else {
-      el.textContent = (isFloat ? start.toFixed(1) : Math.floor(start)) + suffix;
+      const currentVal = isFloat ? start.toFixed(1) : Math.floor(start);
+      el.innerHTML = `${currentVal}<span class="counter-suffix">${suffix}</span>`;
       requestAnimationFrame(updateCount);
     }
   };

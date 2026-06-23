@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="36" height="36" fill="none">
+  <defs>
+    <linearGradient id="logo-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#112d1d" />
+      <stop offset="100%" stop-color="#4ca66b" />
+    </linearGradient>
+  </defs>
+  <!-- Overlapping geometric leaves representing plant biotechnology and premium organic foods -->
+  <path d="M50 90C68 90 82 72 82 50C82 35 70 20 50 10C50 10 50 30 50 50C50 70 50 90 50 90Z" fill="url(#logo-grad)" opacity="0.95" />
+  <path d="M50 90C32 90 18 72 18 50C18 35 30 20 50 10C50 10 50 30 50 50C50 70 50 90 50 90Z" fill="#4ca66b" opacity="0.7" />
+  <path d="M50 10C50 10 65 30 65 50C65 70 50 90 50 90C50 90 35 70 35 50C35 30 50 10 50 10Z" fill="#ffffff" opacity="0.3" />
+  <path d="M50 10V90" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.5" />
+</svg>
