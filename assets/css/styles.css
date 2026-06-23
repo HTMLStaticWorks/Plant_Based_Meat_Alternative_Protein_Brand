@@ -57,7 +57,18 @@ body {
   overflow-x: hidden;
   transition: background-color 0.5s ease, color 0.5s ease;
   line-height: 1.6;
+  animation: body-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+
+@keyframes body-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 /* TYPOGRAPHY */
 h1, .h1 {
@@ -159,6 +170,10 @@ p, .body-text {
 
 /* BUTTONS */
 .btn-premium {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   font-family: var(--font-family);
   font-weight: 600;
   text-transform: uppercase;
@@ -196,6 +211,10 @@ p, .body-text {
 }
 
 .btn-outline-premium {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   font-family: var(--font-family);
   font-weight: 600;
   text-transform: uppercase;
@@ -222,6 +241,16 @@ p, .body-text {
 [data-theme="dark"] .btn-outline-premium:hover {
   background-color: var(--color-secondary);
   color: #ffffff !important;
+}
+
+.btn-premium-circle {
+  width: 44px;
+  height: 44px;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
 /* GLASSMORPHISM UI COMPONENTS */
@@ -478,7 +507,12 @@ footer {
   background-color: #050806;
 }
 
-footer p, footer a {
+footer p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+footer a {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   font-size: 0.95rem;
@@ -760,7 +794,13 @@ footer .brand-logo {
   opacity: 1 !important;
 }
 .lead {
-  color: var(--color-text-muted) !important;
+  color: var(--color-text-muted);
+}
+.bg-dark .counter-num {
+  color: var(--color-secondary) !important;
+}
+.bg-dark .lead {
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 [data-theme="dark"] .text-dark {
   color: var(--color-text) !important;
@@ -782,6 +822,15 @@ footer .brand-logo {
 }
 [data-theme="dark"] .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.navbar-toggler-icon {
+  transition: transform 0.3s ease, background-image 0.3s ease;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  transform: rotate(90deg);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23112d1d' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 2l12 12M14 2L2 14'/%3e%3c/svg%3e") !important;
 }
 [data-theme="dark"] .form-select {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23f5f0e6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
